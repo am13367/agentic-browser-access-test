@@ -1,0 +1,32 @@
+:root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color:#172033; background:#f4f7fb; }
+* { box-sizing:border-box; }
+body { margin:0; }
+.shell { width:min(980px, calc(100% - 32px)); margin:48px auto; background:white; border:1px solid #dbe3ef; border-radius:18px; padding:36px; box-shadow:0 16px 50px #23406b12; }
+.narrow { max-width:680px; }
+h1 { margin:.15rem 0 1rem; font-size:clamp(2rem,5vw,3.25rem); }
+h2 { margin-top:1.75rem; }
+.eyebrow { text-transform:uppercase; letter-spacing:.12em; color:#47658f; font-weight:700; font-size:.78rem; }
+.small { color:#58667b; font-size:.92rem; }
+.row { display:flex; align-items:start; justify-content:space-between; gap:20px; }
+.pill { background:#e8eef8; border-radius:999px; padding:8px 12px; font-size:.82rem; }
+.task-card { padding:18px 22px; border-left:5px solid #315ec7; background:#f2f6ff; border-radius:10px; }
+.task-card h2 { margin:0 0 8px; font-size:1rem; }
+.condition-grid, .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-top:24px; }
+.condition, .product { border:1px solid #cad5e5; border-radius:12px; padding:18px; background:#fff; color:inherit; text-decoration:none; }
+.condition { display:flex; flex-direction:column; gap:5px; }
+.condition:hover { border-color:#315ec7; box-shadow:0 5px 18px #315ec71c; }
+.condition span, .meta { color:#5d6b7e; }
+.product h3 { margin:0 0 8px; }
+button { border:0; border-radius:8px; padding:10px 14px; background:#2458c6; color:white; font-weight:700; cursor:pointer; }
+button.secondary { background:#e7edf7; color:#21334f; }
+.product button { margin-top:14px; width:100%; }
+.result { margin-top:24px; padding:18px; border:2px solid #204faa; border-radius:10px; background:#edf3ff; font-weight:800; }
+.research-tools { margin-top:28px; color:#59677a; }
+.research-tools > * { margin:12px 12px 0 0; }
+.overlay-backdrop { position:fixed; inset:0; background:#17203355; display:grid; place-items:center; padding:22px; z-index:20; }
+.popup { width:min(520px,100%); background:white; border:3px solid #e3a008; border-radius:14px; padding:26px; box-shadow:0 24px 80px #0004; }
+.popup h2 { margin:0 0 10px; }
+.popup-actions { display:flex; gap:10px; margin-top:18px; }
+.popup .dismiss { background:#e8edf4; color:#263750; }
+code { background:#eef2f7; padding:.15em .35em; border-radius:4px; }
+@media (max-width:600px) { .shell { margin:12px auto; padding:22px; } .row { display:block; } }
