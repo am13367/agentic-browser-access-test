@@ -112,13 +112,3 @@ function showOverlay(template) {
   backdrop.querySelector('.dismiss').addEventListener('click', () => { event('overlay_dismissed'); backdrop.remove(); });
   document.querySelector('#overlay-root').append(backdrop);
 }
-
-document.querySelector('#download-log').addEventListener('click', () => {
-  event('log_downloaded');
-  const blob = new Blob([JSON.stringify(run, null, 2)], {type:'application/json'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = `prismata-pilot-${condition}-${session.session_id}.json`;
-  a.click();
-  URL.revokeObjectURL(a.href);
-});
